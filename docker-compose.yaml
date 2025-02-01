@@ -1,0 +1,13 @@
+version: '3'
+name: "portfolio"
+services:
+    portfolio:
+        hostname: portfolio
+        build:
+            context: ./front
+        volumes:
+            - ./front/src:/usr/app/src
+        tty: true
+        restart: always
+        ports:
+            - "3070:3070"
